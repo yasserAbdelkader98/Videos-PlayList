@@ -1,0 +1,67 @@
+.container{
+    width: 80%;
+    min-height: 500px;
+    margin: 50px auto;
+    border: 3px solid black;
+    border-radius: 30px;
+    box-shadow: 20px 20px 20px lightsalmon inset , -20px -20px 20px lightsalmon inset;
+    display: flex;
+    flex-direction: row;
+}
+
+.container .buttons{
+    width: 20%;
+    min-height: 400px;
+    margin: 15px;
+    border: 3px solid black;
+    border-radius: 30px;
+    box-shadow: 20px 20px 20px lightsalmon inset , -20px -20px 20px lightsalmon inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.buttons input{
+    width: 60%;
+    height: 50px;
+    border-radius: 15px;
+    border: 3px solid blue;
+    cursor: pointer;
+    transition: all 2s;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.buttons:hover{
+    background-color: orange;
+}
+
+.buttons input:hover{
+    transform: rotate(360deg);
+    background-color: white;
+}
+
+.container .display{
+    width: 90%;
+    min-height: 400px;
+    margin: 15px;
+    border: 3px solid black;
+    border-radius: 30px;
+    box-shadow: 20px 20px 20px lightsalmon inset , -20px -20px 20px lightsalmon inset;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.display video{
+    display: none;
+    width: 80%;
+    height: 80%;
+    transition: all 2s;
+}
+
+.myVideo:hover{
+    transform: scale(1.2);
+}

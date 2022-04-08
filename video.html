@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <div class="container">
+        <section class="buttons">
+           <input type="button" value="video 1">
+           <input type="button" value="video 2">
+           <input type="button" value="video 3">
+           <input type="button" value="video 4">
+           <input type="button" value="video 5">
+           <input type="button" value="video 6">
+           <input type="button" value="video 7">
+           <input type="button" value="video 8">
+        </section>
+        <section class="display">
+            <video class="myVideo" src="./videos/ww.mp4" type="video/mp4" controls></video>
+        </section>
+    </div>
+
+    <script>
+       let AllButtons = document.querySelectorAll('.buttons input');
+       let myVideo = document.querySelector('.display video');
+       let srcs = ['./videos/ww.mp4','./videos/nambia2.mp4','./videos/nambia3.mp4','./videos/nambia1.mp4','./videos/nambia2.mp4','./videos/nambia3.mp4','./videos/nambia1.mp4','./videos/nambia2.mp4']
+
+    for(let i=0; i<AllButtons.length; i++){
+       let myButton = AllButtons[i];
+       AllButtons[i].addEventListener('click',function(){
+        myVideo.setAttribute('src',srcs[i]);
+        for(button of AllButtons){
+            button.style.backgroundColor = 'transparent';
+        }
+        myButton.style.backgroundColor = 'blue';
+        myVideo.style.display='inline';
+        myVideo.autoplay = true;
+        myVideo.load();
+    }
+    )}
+    
+    
+    </script>    
+</body>
+</html>
